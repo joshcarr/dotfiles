@@ -8,3 +8,5 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+alias pg='ping -c 10 google.com'
