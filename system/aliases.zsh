@@ -10,3 +10,5 @@ then
 fi
 
 alias pg='ping -c 10 google.com'
+
+alias gr="growlnotify -m 'Process is done!'"
