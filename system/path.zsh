@@ -1,3 +1,5 @@
 export PATH=".:bin:/usr/local/bin:/usr/local/sbin:$HOME/.sfs:$ZSH/bin:$PATH"
-
+export PATH="$(brew --prefix)/bin:$PATH"
+export PATH="$(brew --prefix)/lib:$PATH"
+export PATH="/usr/local/Cellar/php/5.3.10/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
