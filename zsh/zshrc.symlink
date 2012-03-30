@@ -21,4 +21,5 @@ compinit
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.sh) source $config_file
 
-rvm use default
+# I've needed the below in the past. Perhaps it was an earlier version of zsh on an older machine.
+# rvm use default
