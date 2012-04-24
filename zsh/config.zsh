@@ -4,8 +4,15 @@ else
   export PS1='%3~$(git_info_for_prompt)%# '
 fi
 
+# export LSCOLORS='xxfxcxdxgfegedabagacad'
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
+
+if [ "$TERM" != "dumb" ]; then
+    export LS_OPTIONS='--color=auto'
+    eval `gdircolors ~/.dir_colors`
+fi
+
 
 fpath=($ZSH/zsh/functions $fpath)
 
