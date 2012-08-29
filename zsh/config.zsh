@@ -38,10 +38,13 @@ setopt HIST_REDUCE_BLANKS
 setopt complete_aliases
 
 zle -N newtab
-
+# esc left
 bindkey '^[^[[D' backward-word
+# esc right
 bindkey '^[^[[C' forward-word
+# ctrl left
 bindkey '^[[5D' beginning-of-line
+# ctrl right
 bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
