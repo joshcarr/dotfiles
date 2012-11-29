@@ -1,0 +1,1 @@
+alias mongo-up="mongod --fork --logpath /var/log/mongod.log --logappend"
