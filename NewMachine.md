@@ -8,6 +8,7 @@
   * wget
   * rvm
   * nvm
+  * hostess gem
 
 ## Apps
 
@@ -22,6 +23,7 @@
   * Growl
   * Adium
   * AudioScrobbler
+  * Gyazo
 
 OSX
 
