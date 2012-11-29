@@ -13,6 +13,7 @@ if [ "$TERM" != "dumb" ]; then
     eval `gdircolors ~/.dir_colors`
 fi
 
+source "`brew --prefix`/etc/grc.bashrc"
 
 fpath=($ZSH/zsh/functions $fpath)
 
