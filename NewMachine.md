@@ -24,6 +24,7 @@
   * Adium
   * AudioScrobbler
   * Gyazo
+  * SequelPro
 
 OSX
 
