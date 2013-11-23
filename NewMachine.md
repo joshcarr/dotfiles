@@ -9,6 +9,9 @@
   * rvm
   * nvm
   * hostess gem
+  * brew install trash
+  * brew install coreutils
+  * grunt
 
 ## Apps
 
