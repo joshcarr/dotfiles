@@ -1,6 +1,6 @@
 # For working w/ Python virtualenvs
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/share/python/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 alias v='workon'
 alias v.deactivate='deactivate'
 alias v.mk='mkvirtualenv --no-site-packages'
