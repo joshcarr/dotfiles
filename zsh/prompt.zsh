@@ -62,6 +62,22 @@ rb_prompt() {
   fi
 }
 
+node_version() {
+  if (( $+commands[node] ))
+  then
+    echo "$(node --version | awk '{print $1}')"
+  fi
+}
+
+node_prompt() {
+  if ! [[ -z "$(node_version)" ]]
+  then
+    echo "%{$fg_bold[yellow]%}$(node_version)%{$reset_color%} "
+  else
+    echo ""
+  fi
+}
+
 directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
@@ -70,7 +86,7 @@ current_time() {
   echo "%{$fg_bold[cyan]%}%*%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(current_time) $(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT=$'\n$(current_time) $(node_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
