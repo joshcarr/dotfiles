@@ -4,94 +4,138 @@
  * https://github.com/ProLoser/reslate
  */
 
-S.src('.reslate.js');
-// enable to see debug messages in Console.app
-// $.debug = true;
-slate.alias('hyper', 'ctrl;alt;cmd');
+// S.src('.reslate.js');
+// // enable to see debug messages in Console.app
+// // $.debug = true;
+// slate.alias('hyper', 'ctrl;alt;cmd');
 
-// begin config
-slate.configAll({
-    defaultToCurrentScreen: true,
-    nudgePercentOf: 'screenSize',
-    resizePercentOf: 'screenSize',
-    undoOps: [
-        'active-snapshot',
-        'chain',
-        'grid',
-        'layout',
-        'move',
-        'resize',
-        'sequence',
-        'shell',
-        'push'
-    ]
+// // begin config
+// slate.configAll({
+//     defaultToCurrentScreen: true,
+//     nudgePercentOf: 'screenSize',
+//     resizePercentOf: 'screenSize',
+//     undoOps: [
+//         'active-snapshot',
+//         'chain',
+//         'grid',
+//         'layout',
+//         'move',
+//         'resize',
+//         'sequence',
+//         'shell',
+//         'push'
+//     ]
+// });
+
+// // bindings
+// var left = [
+//     $('barResize', 'left', 2),
+//     $('barResize', 'left', 1.5),
+//     $('toss', '-', 'resize')
+// ];
+// var right = [
+//     $('barResize', 'right', 2),
+//     $('barResize', 'right', 3),
+//     $('toss', '+', 'resize')
+// ];
+// var up = [
+//     $('barResize', 'top', 2),
+//     $('corner', 'top-left', 2, 2),
+//     $('corner', 'top-right', 2, 2),
+//     $('toss', '0', 'resize')
+// ];
+// var down = [
+//     $('barResize', 'bottom', 2),
+//     $('corner', 'bottom-left', 2, 2),
+//     $('corner', 'bottom-right', 2, 2),
+//     $('toss', '0', 'resize')
+// ];
+ 
+// // bindings
+// slate.bindAll({
+//     hyper: {
+//         left: left,
+//         // j: left,
+//         right: right,
+//         // l: right,
+//         up: up,
+//         // i: up,
+//         down: down,
+//         // k: down,
+//         'return': [
+//             $('barResize', 'left', 1),
+//             $('center', 'center', 1.5, 1.25)
+//         ],
+//         // throw to monitor
+//         '`': ['throw 0 resize',
+//               'throw 1 resize'],
+//         '1': $('toss', '0', 'resize'),
+//         '2': $('toss', '1', 'resize'),
+//         '3': $('toss', '2', 'resize'),
+//         // direct focus 
+//         a: $.focus('Adium'),
+//         c: $.focus('Google Chrome'),
+//         // s: $.focus('Sublime Text 2'),
+//         t: $.focus('Terminal'),
+//         f: $.focus('Finder'),
+//         e: $.focus('Sparrow'),
+//         x: $.focus('X11'),
+//         p: $.focus('Spotify'),
+//         // utility functions
+//         f1: 'relaunch',
+//         z: 'undo',
+//         tab: 'hint',
+//         s: save,
+//         l: load
+//     }
+// });
+ 
+// // Auto Snapshotting
+ 
+// // Save snapshot
+// function save(event, win){
+//   $.log('saved', name());
+//   slate.operation("snapshot", {
+//     name: name().join(','),
+//     save: true
+//   }).run();
+//   slate.default(name(), name().join(','));
+// }
+ 
+// // Load snapshot
+// function load(event, win){
+//   $.log('loaded', name());
+//   slate.operation("activate-snapshot", {
+//     name: name().join(',')
+//   }).run();
+// }
+ 
+// // slate.on('windowMoved', save);
+// // slate.on('windowResized', save);
+
+// // Log that we're done configuring
+// S.log('[SLATE] -------------- Finished Loading Config --------------');
+
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+
+// Configs
+S.cfga({
+  "defaultToCurrentScreen" : true,
+  "secondsBetweenRepeat" : 0.1,
+  "checkDefaultsOnLoad" : true,
+  "focusCheckWidthMax" : 3000,
+  "orderScreensLeftToRight" : true
 });
 
-// bindings
-var left = [
-    $('barResize', 'left', 2),
-    $('barResize', 'left', 1.5),
-    $('toss', '-', 'resize')
-];
-var right = [
-    $('barResize', 'right', 2),
-    $('barResize', 'right', 3),
-    $('toss', '+', 'resize')
-];
-var up = [
-    $('barResize', 'top', 2),
-    $('corner', 'top-left', 2, 2),
-    $('corner', 'top-right', 2, 2),
-    $('toss', '0', 'resize')
-];
-var down = [
-    $('barResize', 'bottom', 2),
-    $('corner', 'bottom-left', 2, 2),
-    $('corner', 'bottom-right', 2, 2),
-    $('toss', '0', 'resize')
-];
- 
-// bindings
-slate.bindAll({
-    hyper: {
-        left: left,
-        // j: left,
-        right: right,
-        // l: right,
-        up: up,
-        // i: up,
-        down: down,
-        // k: down,
-        'return': [
-            $('barResize', 'left', 1),
-            $('center', 'center', 1.5, 1.25)
-        ],
-        // throw to monitor
-        '`': ['throw 0 resize',
-              'throw 1 resize'],
-        '1': $('toss', '0', 'resize'),
-        '2': $('toss', '1', 'resize'),
-        '3': $('toss', '2', 'resize'),
-        // direct focus 
-        a: $.focus('Adium'),
-        c: $.focus('Google Chrome'),
-        // s: $.focus('Sublime Text 2'),
-        t: $.focus('Terminal'),
-        f: $.focus('Finder'),
-        e: $.focus('Sparrow'),
-        x: $.focus('X11'),
-        p: $.focus('Spotify'),
-        // utility functions
-        f1: 'relaunch',
-        z: 'undo',
-        tab: 'hint',
-        s: save,
-        l: load
-    }
-});
- 
-// Auto Snapshotting
- 
 // Returns name generated from screen resolutions
 function name() {
   var n = [];
@@ -101,63 +145,43 @@ function name() {
   });
   return n;
 }
- 
-// Save snapshot
-function save(event, win){
-  $.log('saved', name());
-  slate.operation("snapshot", {
-    name: name().join(','),
-    save: true
-  }).run();
-  slate.default(name(), name().join(','));
-}
- 
-// Load snapshot
-function load(event, win){
-  $.log('loaded', name());
-  slate.operation("activate-snapshot", {
-    name: name().join(',')
-  }).run();
-}
- 
-// slate.on('windowMoved', save);
-// slate.on('windowResized', save);
 
-// Log that we're done configuring
-S.log('[SLATE] -------------- Finished Loading Config --------------');
+// 1080x1920,1440x900,1920x1080
+// Monitors
+var monitorPortrait = "1080x1920";
+var monitorLandscape = "1920x1080";
+var monitorLaptop = "1440x900";
 
-/////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////
+// laptopFull
+// portraitFull
+// landscapeFull
+// laptopLeftHalf
+// laptopRightHalf
+// landscapeLeftHalf
+// landscapeRightHalf
+// portraitTopHalf
+// portraitBottomHalf
 
-// // Configs
-// S.cfga({
-//   "defaultToCurrentScreen" : true,
-//   "secondsBetweenRepeat" : 0.1,
-//   "checkDefaultsOnLoad" : true,
-//   "focusCheckWidthMax" : 3000,
-//   "orderScreensLeftToRight" : true
-// });
+// Operations
+var laptopFull = S.op("move", {
+  "screen" : monitorLaptop,
+  "x" : "screenOriginX",
+  "y" : "screenOriginY",
+  "width" : "screenSizeX",
+  "height" : "screenSizeY"
+});
+var portraitFull = laptopFull.dup({ "screen" : monitorPortrait });
+var landscapeFull = laptopFull.dup({ "screen" : monitorLandscape });
 
-// // Monitors
-// var monTbolt  = "2560x1600";
-// var monLaptop = "1920x1200";
+var laptopLeftHalf = laptopFull.dup({ "width" : "screenSizeX/2" });
+var laptopRightHalf = laptopLeftHalf.dup({ "x" : "screenOriginX + screenSizeX/2" });
 
-// // Operations
-// var lapFull = S.op("move", {
-//   "screen" : monLaptop,
-//   "x" : "screenOriginX",
-//   "y" : "screenOriginY",
-//   "width" : "screenSizeX",
-//   "height" : "screenSizeY"
-// });
+var landscapeLeftHalf = landscapeFull.dup({ "width" : "screenSizeX/2" });
+var landscapeRightHalf = landscapeLeftHalf.dup({ "x" : "screenOriginX + screenSizeX/2" });
+
+var portraitTopHalf = portraitFull.dup({ "height" : "screenSizeY/2" });
+var portraitBottomHalf = portraitTopHalf.dup({ "y" : "screenOriginY + screenSizeY/2" });
+
 // var lapChat = S.op("corner", {
 //   "screen" : monLaptop,
 //   "direction" : "top-left",
@@ -189,198 +213,255 @@ S.log('[SLATE] -------------- Finished Loading Config --------------');
 // var tboltRightTop = tboltRight.dup({ "height" : "screenSizeY/2" });
 // var tboltRightBot = tboltRightTop.dup({ "y" : "screenOriginY+screenSizeY/2" });
 
-// // common layout hashes
-// var lapMainHash = {
-//   "operations" : [lapMain],
-//   "ignore-fail" : true,
-//   "repeat" : true
-// };
-// var lapFullHash = {
-//   "operations" : [lapFull],
-//   "ignore-fail" : true,
-//   "repeat" : true
-// };
-// var adiumHash = {
-//   "operations" : [lapChat, lapMain],
-//   "ignore-fail" : true,
-//   "title-order" : ["Contacts"],
-//   "repeat-last" : true
-// };
-// var mvimHash = {
-//   "operations" : [tboltMid, tboltRightTop],
-//   "repeat" : true
-// };
-// var tboltBigHash = {
-//   "operations" : [tboltBig],
-//   "sort-title" : true,
-//   "repeat" : true
-// };
-// var tboltFullHash = {
-//   "operations" : [tboltFull],
-//   "sort-title" : true,
-//   "repeat" : true
-// };
-// var genBrowserHash = function(regex) {
-//   return {
-//     "operations" : [function(windowObject) {
-//       var title = windowObject.title();
-//       if (title !== undefined && title.match(regex)) {
-//         windowObject.doOperation(tboltLeftBot);
-//       } else {
-//         windowObject.doOperation(lapFull);
-//       }
-//     }],
-//     "ignore-fail" : true,
-//     "repeat" : true
-//   };
-// }
+// common layout hashes
 
-// // 2 monitor layout
-// var twoMonitorLayout = S.lay("twoMonitor", {
-//   "Adium" : {
-//     "operations" : [lapChat, lapMain],
-//     "ignore-fail" : true,
-//     "title-order" : ["Contacts"],
-//     "repeat-last" : true
-//   },
-//   "MacVim" : mvimHash,
-//   "iTerm" : tboltFullHash,
-//   "Xcode" : tboltBigHash,
-//   "Google Chrome" : genBrowserHash(/^Developer\sTools\s-\s.+$/),
-//   "GitX" : {
-//     "operations" : [lapFull],
-//     "repeat" : true
-//   },
-//   "Firefox" : genBrowserHash(/^Firebug\s-\s.+$/),
-//   "Safari" : lapFullHash,
-//   "Spotify" : {
-//     "operations" : [lapFull],
-//     "repeat" : true
-//   },
-//   "TextEdit" : {
-//     "operations" : [lapFull],
-//     "repeat" : true
-//   }
-// });
+var laptopFullHash = {
+  "operations" : [laptopFull],
+  "ignore-fail" : true,
+  "repeat" : true
+};
+var landscapeFullHash = {
+  "operations" : [landscapeFull],
+  "ignore-fail" : true,
+  "repeat" : true
+};
 
-// // 1 monitor layout
-// var oneMonitorLayout = S.lay("oneMonitor", {
-//   "Adium" : adiumHash,
-//   "MacVim" : lapFullHash,
-//   "iTerm" : lapFullHash,
-//   "Google Chrome" : lapFullHash,
-//   "Xcode" : lapFullHash,
-//   "Flex Builder" : lapFullHash,
-//   "GitX" : lapFullHash,
-//   "Ooyala Player Debug Console" : lapFullHash,
-//   "Firefox" : lapFullHash,
-//   "Safari" : lapFullHash,
-//   "Eclipse" : lapFullHash,
-//   "Spotify" : lapFullHash
-// });
+var portraitTopHalfHash = {
+  "operations" : [portraitTopHalf],
+  "ignore-fail" : true,
+  "repeat" : true
+};
 
-// // Defaults
-// S.def(2, twoMonitorLayout);
-// S.def(1, oneMonitorLayout);
+var portraitBottomHalfHash = {
+  "operations" : [portraitBottomHalf],
+  "ignore-fail" : true,
+  "repeat" : true
+};
 
-// // Layout Operations
-// var twoMonitor = S.op("layout", { "name" : twoMonitorLayout });
-// var oneMonitor = S.op("layout", { "name" : oneMonitorLayout });
-// var universalLayout = function() {
-//   // Should probably make sure the resolutions match but w/e
-//   S.log("SCREEN COUNT: "+S.screenCount());
-//   if (S.screenCount() === 2) {
-//     twoMonitor.run();
-//   } else if (S.screenCount() === 1) {
-//     oneMonitor.run();
-//   }
-// };
+var genBrowserHash = function(regex) {
+  return {
+    "operations" : [function(windowObject) {
+      var title = windowObject.title();
+      if (title !== undefined && title.match(regex)) {
+        windowObject.doOperation(portraitTopHalf);
+      } else {
+        windowObject.doOperation(laptopFull);
+      }
+    }],
+    "ignore-fail" : true,
+    "repeat" : true
+  };
+};
 
-// // Batch bind everything. Less typing.
-// S.bnda({
-//   // Layout Bindings
-//   "padEnter:ctrl" : universalLayout,
-//   "space:ctrl" : universalLayout,
+// Chrome
+// Sublime Text
+// iTerm
+// Rdio
+// Evernote
+// Things
+// HipChat
+// Messages
+// GitX
+// 1Password 5
 
-//   // Basic Location Bindings
-//   "pad0:ctrl" : lapChat,
-//   "[:ctrl" : lapChat,
-//   "pad.:ctrl" : lapMain,
-//   "]:ctrl" : lapMain,
-//   "pad1:ctrl" : tboltLeftBot,
-//   "pad2:ctrl" : tboltMidBot,
-//   "pad3:ctrl" : tboltRightBot,
-//   "pad4:ctrl" : tboltLeftTop,
-//   "pad5:ctrl" : tboltMidTop,
-//   "pad6:ctrl" : tboltRightTop,
-//   "pad7:ctrl" : tboltLeft,
-//   "pad8:ctrl" : tboltMid,
-//   "pad9:ctrl" : tboltRight,
-//   "pad=:ctrl" : tboltFull,
+// 1 monitor layout
+var oneMonitorLayout = S.lay("oneMonitor", {
+  "Google Chrome" : laptopFullHash,
+  "iTerm" : laptopFullHash,
+  "Sublime Text" : laptopFullHash,
+  "Evernote" : laptopFullHash,
+  "Things" : laptopFullHash,
+  "HipChat" : laptopFullHash,
+  "Messages" : laptopFullHash,
+  "Rdio" : laptopFullHash,
+  "1Password 5" : laptopFullHash,
+  "GitX" : laptopFullHash,
+  "Firefox" : laptopFullHash,
+  "Safari" : laptopFullHash
+});
 
-//   // Resize Bindings
-//   // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
-//   "right:ctrl" : S.op("resize", { "width" : "+10%", "height" : "+0" }),
-//   "left:ctrl" : S.op("resize", { "width" : "-10%", "height" : "+0" }),
-//   "up:ctrl" : S.op("resize", { "width" : "+0", "height" : "-10%" }),
-//   "down:ctrl" : S.op("resize", { "width" : "+0", "height" : "+10%" }),
-//   "right:alt" : S.op("resize", { "width" : "-10%", "height" : "+0", "anchor" : "bottom-right" }),
-//   "left:alt" : S.op("resize", { "width" : "+10%", "height" : "+0", "anchor" : "bottom-right" }),
-//   "up:alt" : S.op("resize", { "width" : "+0", "height" : "+10%", "anchor" : "bottom-right" }),
-//   "down:alt" : S.op("resize", { "width" : "+0", "height" : "-10%", "anchor" : "bottom-right" }),
+// 2 monitor layout
+var twoMonitorLayout = S.lay("twoMonitor", {
+  "Google Chrome" : laptopFullHash,
+  "iTerm" : laptopFullHash,
+  "Sublime Text" : landscapeFullHash,
+  "Evernote" : laptopFullHash,
+  "Things" : laptopFullHash,
+  "HipChat" : laptopFullHash,
+  "Messages" : laptopFullHash,
+  "Rdio" : laptopFullHash,
+  "1Password 5" : laptopFullHash,
+  "GitX" : laptopFullHash,
+  "Firefox" : laptopFullHash,
+  "Safari" : laptopFullHash
+});
 
-//   // Push Bindings
-//   // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
-//   "right:ctrl;shift" : S.op("push", { "direction" : "right", "style" : "bar-resize:screenSizeX/2" }),
-//   "left:ctrl;shift" : S.op("push", { "direction" : "left", "style" : "bar-resize:screenSizeX/2" }),
-//   "up:ctrl;shift" : S.op("push", { "direction" : "up", "style" : "bar-resize:screenSizeY/2" }),
-//   "down:ctrl;shift" : S.op("push", { "direction" : "down", "style" : "bar-resize:screenSizeY/2" }),
+// 3 monitor layout
+var threeMonitorLayout = S.lay("twoMonitor", {
 
-//   // Nudge Bindings
-//   // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
-//   "right:ctrl;alt" : S.op("nudge", { "x" : "+10%", "y" : "+0" }),
-//   "left:ctrl;alt" : S.op("nudge", { "x" : "-10%", "y" : "+0" }),
-//   "up:ctrl;alt" : S.op("nudge", { "x" : "+0", "y" : "-10%" }),
-//   "down:ctrl;alt" : S.op("nudge", { "x" : "+0", "y" : "+10%" }),
+  "Google Chrome" : genBrowserHash(/^Developer\sTools\s-\s.+$/),
+  "iTerm" : portraitTopHalfHash,
+  "Sublime Text" : landscapeFullHash,
+  "Evernote" : portraitTopHalfHash,
+  "Things" : portraitTopHalfHash,
+  "HipChat" : portraitBottomHalfHash,
+  "Messages" : {
+    "operations" : [laptopRightHalf],
+    "ignore-fail" : true,
+    "repeat" : true
+  },
+  "Rdio" : portraitBottomHalfHash,
+  "1Password 5" : laptopFullHash,
+  "GitX" : portraitTopHalfHash,
+  "Firefox" : genBrowserHash(/^Firebug\s-\s.+$/),
+  "Safari" : genBrowserHash(/^Developer\sTools\s-\s.+$/),
 
-//   // Throw Bindings
-//   // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
-//   "pad1:ctrl;alt" : S.op("throw", { "screen" : "2", "width" : "screenSizeX", "height" : "screenSizeY" }),
-//   "pad2:ctrl;alt" : S.op("throw", { "screen" : "1", "width" : "screenSizeX", "height" : "screenSizeY" }),
-//   "pad3:ctrl;alt" : S.op("throw", { "screen" : "0", "width" : "screenSizeX", "height" : "screenSizeY" }),
-//   "right:ctrl;alt;cmd" : S.op("throw", { "screen" : "right", "width" : "screenSizeX", "height" : "screenSizeY" }),
-//   "left:ctrl;alt;cmd" : S.op("throw", { "screen" : "left", "width" : "screenSizeX", "height" : "screenSizeY" }),
-//   "up:ctrl;alt;cmd" : S.op("throw", { "screen" : "up", "width" : "screenSizeX", "height" : "screenSizeY" }),
-//   "down:ctrl;alt;cmd" : S.op("throw", { "screen" : "down", "width" : "screenSizeX", "height" : "screenSizeY" }),
+});
 
-//   // Focus Bindings
-//   // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
-//   "l:cmd" : S.op("focus", { "direction" : "right" }),
-//   "h:cmd" : S.op("focus", { "direction" : "left" }),
-//   "k:cmd" : S.op("focus", { "direction" : "up" }),
-//   "j:cmd" : S.op("focus", { "direction" : "down" }),
-//   "k:cmd;alt" : S.op("focus", { "direction" : "behind" }),
-//   "j:cmd;alt" : S.op("focus", { "direction" : "behind" }),
-//   "right:cmd" : S.op("focus", { "direction" : "right" }),
-//   "left:cmd" : S.op("focus", { "direction" : "left" }),
-//   "up:cmd" : S.op("focus", { "direction" : "up" }),
-//   "down:cmd" : S.op("focus", { "direction" : "down" }),
-//   "up:cmd;alt" : S.op("focus", { "direction" : "behind" }),
-//   "down:cmd;alt" : S.op("focus", { "direction" : "behind" }),
+// Defaults
+S.def(1, oneMonitorLayout);
+S.def(2, twoMonitorLayout);
+S.def(3, threeMonitorLayout);
 
-//   // Window Hints
-//   "esc:cmd" : S.op("hint"),
+// Layout Operations
+var oneMonitor = S.op("layout", { "name" : oneMonitorLayout });
+var twoMonitor = S.op("layout", { "name" : twoMonitorLayout });
+var threeMonitor = S.op("layout", { "name" : threeMonitorLayout });
 
-//   // Switch currently doesn't work well so I'm commenting it out until I fix it.
-//   //"tab:cmd" : S.op("switch"),
+var universalLayout = function() {
+  // Should probably make sure the resolutions match but w/e
+  S.log("SCREEN COUNT: "+S.screenCount() + " " + name());
+  if (S.screenCount() === 1) {
+    oneMonitor.run();
+  } else if (S.screenCount() === 2) {
+    twoMonitor.run();
+  } else if (S.screenCount() === 3) {
+    threeMonitor.run();
+  }
+};
 
-//   // Grid
-//   "esc:ctrl" : S.op("grid")
-// });
+// Batch bind everything. Less typing.
+S.bnda({
+  // Layout Bindings
+  "0:ctrl;alt;cmd" : universalLayout,
+  // "space:ctrl" : universalLayout,
 
-// // Test Cases
-// S.src(".slate.test", true);
-// S.src(".slate.test.js", true);
+  // // Basic Location Bindings
+  // "pad0:ctrl" : lapChat,
+  // "[:ctrl" : lapChat,
+  // "pad.:ctrl" : lapMain,
+  // "]:ctrl" : lapMain,
+  // "pad1:ctrl" : tboltLeftBot,
+  // "pad2:ctrl" : tboltMidBot,
+  // "pad3:ctrl" : tboltRightBot,
+  // "pad4:ctrl" : tboltLeftTop,
+  // "pad5:ctrl" : tboltMidTop,
+  // "pad6:ctrl" : tboltRightTop,
+  // "pad7:ctrl" : tboltLeft,
+  // "pad8:ctrl" : tboltMid,
+  // "pad9:ctrl" : tboltRight,
+  // "pad=:ctrl" : tboltFull,
 
-// // Log that we're done configuring
-// S.log("[SLATE] -------------- Finished Loading Config --------------");
+  // Move!
+  "return:ctrl;alt;cmd" : S.op("move", {
+    "x" : "screenOriginX",
+    "y" : "screenOriginY",
+    "width" : "screenSizeX",
+    "height" : "screenSizeY"
+  }),
+
+  "right:ctrl;alt;cmd" : S.op("move", {
+    "x" : "screenOriginX + screenSizeX/2",
+    "y" : "screenOriginY",
+    "width" : "screenSizeX/2",
+    "height" : "screenSizeY"
+  }),
+
+  "left:ctrl;alt;cmd" : S.op("move", {
+    "x" : "screenOriginX",
+    "y" : "screenOriginY",
+    "width" : "screenSizeX/2",
+    "height" : "screenSizeY"
+  }),
+
+  "up:ctrl;alt;cmd" : S.op("move", {
+    "x" : "screenOriginX",
+    "y" : "screenOriginY",
+    "width" : "screenSizeX",
+    "height" : "screenSizeY/2"
+  }),
+
+  "down:ctrl;alt;cmd" : S.op("move", {
+    "x" : "screenOriginX",
+    "y" : "screenOriginY + screenSizeY/2",
+    "width" : "screenSizeX",
+    "height" : "screenSizeY/2"
+  }),
+
+  // Throw Bindings
+  // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
+  "1:ctrl;alt;cmd" : S.op("throw", { "screen" : "0", "width" : "screenSizeX", "height" : "screenSizeY" }),
+  "2:ctrl;alt;cmd" : S.op("throw", { "screen" : "1", "width" : "screenSizeX", "height" : "screenSizeY" }),
+  "3:ctrl;alt;cmd" : S.op("throw", { "screen" : "2", "width" : "screenSizeX", "height" : "screenSizeY" }),
+
+  // // Resize Bindings
+  // // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
+  // "right:ctrl" : S.op("resize", { "width" : "+10%", "height" : "+0" }),
+  // "left:ctrl" : S.op("resize", { "width" : "-10%", "height" : "+0" }),
+  // "up:ctrl" : S.op("resize", { "width" : "+0", "height" : "-10%" }),
+  // "down:ctrl" : S.op("resize", { "width" : "+0", "height" : "+10%" }),
+  // "right:alt" : S.op("resize", { "width" : "-10%", "height" : "+0", "anchor" : "bottom-right" }),
+  // "left:alt" : S.op("resize", { "width" : "+10%", "height" : "+0", "anchor" : "bottom-right" }),
+  // "up:alt" : S.op("resize", { "width" : "+0", "height" : "+10%", "anchor" : "bottom-right" }),
+  // "down:alt" : S.op("resize", { "width" : "+0", "height" : "-10%", "anchor" : "bottom-right" }),
+
+  // // Push Bindings
+  // // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
+  // "right:ctrl;shift" : S.op("push", { "direction" : "right", "style" : "bar-resize:screenSizeX/2" }),
+  // "left:ctrl;shift" : S.op("push", { "direction" : "left", "style" : "bar-resize:screenSizeX/2" }),
+  // "up:ctrl;shift" : S.op("push", { "direction" : "up", "style" : "bar-resize:screenSizeY/2" }),
+  // "down:ctrl;shift" : S.op("push", { "direction" : "down", "style" : "bar-resize:screenSizeY/2" }),
+
+  // // Nudge Bindings
+  // // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
+  // "right:ctrl;alt" : S.op("nudge", { "x" : "+10%", "y" : "+0" }),
+  // "left:ctrl;alt" : S.op("nudge", { "x" : "-10%", "y" : "+0" }),
+  // "up:ctrl;alt" : S.op("nudge", { "x" : "+0", "y" : "-10%" }),
+  // "down:ctrl;alt" : S.op("nudge", { "x" : "+0", "y" : "+10%" }),
+
+
+
+  // "up:ctrl;alt;cmd" : S.op("throw", { "screen" : "up", "width" : "screenSizeX", "height" : "screenSizeY" }),
+  // "down:ctrl;alt;cmd" : S.op("throw", { "screen" : "down", "width" : "screenSizeX", "height" : "screenSizeY" }),
+
+  // Focus Bindings
+  // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
+  // "l:cmd" : S.op("focus", { "direction" : "right" }),
+  // "h:cmd" : S.op("focus", { "direction" : "left" }),
+  // "k:cmd" : S.op("focus", { "direction" : "up" }),
+  // "j:cmd" : S.op("focus", { "direction" : "down" }),
+  // "k:cmd;alt" : S.op("focus", { "direction" : "behind" }),
+  // "j:cmd;alt" : S.op("focus", { "direction" : "behind" }),
+  // "right:cmd" : S.op("focus", { "direction" : "right" }),
+  // "left:cmd" : S.op("focus", { "direction" : "left" }),
+  // "up:cmd" : S.op("focus", { "direction" : "up" }),
+  // "down:cmd" : S.op("focus", { "direction" : "down" }),
+  // "up:cmd;alt" : S.op("focus", { "direction" : "behind" }),
+  // "down:cmd;alt" : S.op("focus", { "direction" : "behind" }),
+
+  // Window Hints
+  "esc:cmd" : S.op("hint"),
+
+  // Switch currently doesn't work well so I'm commenting it out until I fix it.
+  //"tab:cmd" : S.op("switch"),
+
+  // Grid
+  "esc:ctrl" : S.op("grid")
+});
+
+// Test Cases
+S.src(".slate.test", true);
+S.src(".slate.test.js", true);
+
+// Log that we're done configuring
+S.log("[SLATE] -------------- Finished Loading Config --------------");
