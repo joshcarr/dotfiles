@@ -55,13 +55,13 @@ var down = [
 slate.bindAll({
     hyper: {
         left: left,
-        j: left,
+        // j: left,
         right: right,
-        l: right,
+        // l: right,
         up: up,
-        i: up,
+        // i: up,
         down: down,
-        k: down,
+        // k: down,
         'return': [
             $('barResize', 'left', 1),
             $('center', 'center', 1.5, 1.25)
@@ -75,7 +75,7 @@ slate.bindAll({
         // direct focus 
         a: $.focus('Adium'),
         c: $.focus('Google Chrome'),
-        s: $.focus('Sublime Text 2'),
+        // s: $.focus('Sublime Text 2'),
         t: $.focus('Terminal'),
         f: $.focus('Finder'),
         e: $.focus('Sparrow'),
@@ -84,7 +84,9 @@ slate.bindAll({
         // utility functions
         f1: 'relaunch',
         z: 'undo',
-        tab: 'hint'
+        tab: 'hint',
+        s: save,
+        l: load
     }
 });
  
@@ -92,12 +94,12 @@ slate.bindAll({
  
 // Returns name generated from screen resolutions
 function name() {
-  var name = [];
+  var n = [];
   slate.eachScreen(function(screen){
-    var rect = screen.rect()
-    name.push(rect.width+'x'+rect.height);
+    var rect = screen.rect();
+    n.push(rect.width+'x'+rect.height);
   });
-  return name;
+  return n;
 }
  
 // Save snapshot
@@ -108,7 +110,7 @@ function save(event, win){
     save: true
   }).run();
   slate.default(name(), name().join(','));
-};
+}
  
 // Load snapshot
 function load(event, win){
@@ -116,7 +118,10 @@ function load(event, win){
   slate.operation("activate-snapshot", {
     name: name().join(',')
   }).run();
-};
+}
  
-slate.on('windowMoved', save);
-slate.on('windowResized', save);
+// slate.on('windowMoved', save);
+// slate.on('windowResized', save);
+
+// Log that we're done configuring
+S.log('[SLATE] -------------- Finished Loading Config --------------');
