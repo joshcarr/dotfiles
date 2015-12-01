@@ -256,10 +256,10 @@ var genBrowserHash = function(regex) {
 // Chrome
 // Sublime Text
 // iTerm
-// Rdio
+// Spotify
 // Evernote
 // Things
-// HipChat
+// Slack
 // Messages
 // GitX
 // 1Password 5
@@ -271,9 +271,9 @@ var oneMonitorLayout = S.lay("oneMonitor", {
   "Sublime Text" : laptopFullHash,
   "Evernote" : laptopFullHash,
   "Things" : laptopFullHash,
-  "HipChat" : laptopFullHash,
+  "Slack" : laptopFullHash,
   "Messages" : laptopFullHash,
-  "Rdio" : laptopFullHash,
+  "Spotify" : laptopFullHash,
   "1Password 5" : laptopFullHash,
   "GitX" : laptopFullHash,
   "Firefox" : laptopFullHash,
@@ -287,9 +287,9 @@ var twoMonitorLayout = S.lay("twoMonitor", {
   "Sublime Text" : landscapeFullHash,
   "Evernote" : laptopFullHash,
   "Things" : laptopFullHash,
-  "HipChat" : laptopFullHash,
+  "Slack" : laptopFullHash,
   "Messages" : laptopFullHash,
-  "Rdio" : laptopFullHash,
+  "Spotify" : laptopFullHash,
   "1Password 5" : laptopFullHash,
   "GitX" : laptopFullHash,
   "Firefox" : laptopFullHash,
@@ -304,13 +304,13 @@ var threeMonitorLayout = S.lay("twoMonitor", {
   "Sublime Text" : landscapeFullHash,
   "Evernote" : portraitTopHalfHash,
   "Things" : portraitTopHalfHash,
-  "HipChat" : portraitBottomHalfHash,
+  "Slack" : portraitBottomHalfHash,
   "Messages" : {
     "operations" : [laptopRightHalf],
     "ignore-fail" : true,
     "repeat" : true
   },
-  "Rdio" : portraitBottomHalfHash,
+  "Spotify" : portraitBottomHalfHash,
   "1Password 5" : laptopFullHash,
   "GitX" : portraitTopHalfHash,
   "Firefox" : genBrowserHash(/^Firebug\s-\s.+$/),
