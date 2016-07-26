@@ -1,0 +1,42 @@
+{
+	"auto_complete_commit_on_tab": true,
+	"bold_folder_labels": true,
+	"caret_extra_width": 1,
+	"caret_style": "phase",
+	"close_windows_when_empty": false,
+	"color_scheme": "Packages/User/SublimeLinter/Material-Theme-OceanicNext (SL).tmTheme",
+	"copy_with_empty_selection": false,
+	"drag_text": false,
+	"draw_minimap_border": true,
+	"draw_white_space": "all",
+	"font_face": "Office Code Pro",
+	"font_options":
+	[
+		"no_round"
+	],
+	"font_size": 15.0,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"material_theme_compact_sidebar": true,
+	"material_theme_contrast_mode": true,
+	"material_theme_small_tab": true,
+	"material_theme_tabs_autowidth": true,
+	"material_theme_tree_headings": true,
+	"open_files_in_new_window": false,
+	"scroll_past_end": true,
+	"scroll_speed": 5.0,
+	"show_full_path": true,
+	"tab_size": 2,
+	"theme": "Material-Theme.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": false,
+	"word_wrap": true
+}
