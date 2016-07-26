@@ -1,0 +1,46 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Babel",
+		"Babel Snippets",
+		"Better CoffeeScript",
+		"DocBlockr",
+		"EasyDiff",
+		"EditorConfig",
+		"Emmet",
+		"FixMyJS",
+		"Git",
+		"Handlebars",
+		"HTML5",
+		"JavaScript & NodeJS Snippets",
+		"LESS",
+		"LessImproved",
+		"LogView",
+		"Material Theme",
+		"Material Theme - Appbar",
+		"Origami",
+		"Package Control",
+		"Pretty JSON",
+		"QML",
+		"ReactJS",
+		"Sass",
+		"Schema Validator",
+		"SideBarEnhancements",
+		"StringUtilities",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-contrib-stylelint",
+		"SublimeLinter-csslint",
+		"SublimeLinter-jscs",
+		"SublimeLinter-jshint",
+		"SublimeLinter-jsxhint",
+		"Theme - Spacegray",
+		"ToggleQuotes",
+		"TypeScript"
+	]
+}
