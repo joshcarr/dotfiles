@@ -255,27 +255,27 @@ var genBrowserHash = function(regex) {
 
 // Chrome
 // Sublime Text
-// iTerm
+// iTerm2
 // Spotify
 // Evernote
 // Things
 // Slack
 // Messages
-// GitX
-// 1Password 5
+// GitUp
+// 1Password 6
 
 // 1 monitor layout
 var oneMonitorLayout = S.lay("oneMonitor", {
   "Google Chrome" : laptopFullHash,
-  "iTerm" : laptopFullHash,
+  "iTerm2" : laptopFullHash,
   "Sublime Text" : laptopFullHash,
   "Evernote" : laptopFullHash,
   "Things" : laptopFullHash,
   "Slack" : laptopFullHash,
   "Messages" : laptopFullHash,
   "Spotify" : laptopFullHash,
-  "1Password 5" : laptopFullHash,
-  "GitX" : laptopFullHash,
+  "1Password 6" : laptopFullHash,
+  "GitUp" : laptopFullHash,
   "Firefox" : laptopFullHash,
   "Safari" : laptopFullHash
 });
@@ -283,15 +283,15 @@ var oneMonitorLayout = S.lay("oneMonitor", {
 // 2 monitor layout
 var twoMonitorLayout = S.lay("twoMonitor", {
   "Google Chrome" : laptopFullHash,
-  "iTerm" : laptopFullHash,
+  "iTerm2" : laptopFullHash,
   "Sublime Text" : landscapeFullHash,
   "Evernote" : laptopFullHash,
   "Things" : laptopFullHash,
   "Slack" : laptopFullHash,
   "Messages" : laptopFullHash,
   "Spotify" : laptopFullHash,
-  "1Password 5" : laptopFullHash,
-  "GitX" : laptopFullHash,
+  "1Password 6" : laptopFullHash,
+  "GitUp" : laptopFullHash,
   "Firefox" : laptopFullHash,
   "Safari" : laptopFullHash
 });
@@ -300,7 +300,7 @@ var twoMonitorLayout = S.lay("twoMonitor", {
 var threeMonitorLayout = S.lay("twoMonitor", {
 
   "Google Chrome" : genBrowserHash(/^Developer\sTools\s-\s.+$/),
-  "iTerm" : portraitTopHalfHash,
+  "iTerm2" : portraitTopHalfHash,
   "Sublime Text" : landscapeFullHash,
   "Evernote" : portraitTopHalfHash,
   "Things" : portraitTopHalfHash,
@@ -311,8 +311,8 @@ var threeMonitorLayout = S.lay("twoMonitor", {
     "repeat" : true
   },
   "Spotify" : portraitBottomHalfHash,
-  "1Password 5" : laptopFullHash,
-  "GitX" : portraitTopHalfHash,
+  "1Password 6" : laptopFullHash,
+  "GitUp" : portraitTopHalfHash,
   "Firefox" : genBrowserHash(/^Firebug\s-\s.+$/),
   "Safari" : genBrowserHash(/^Developer\sTools\s-\s.+$/),
 
