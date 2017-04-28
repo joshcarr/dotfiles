@@ -15,6 +15,7 @@ brew 'rbenv'
 brew 'trash'
 brew 'wget'
 brew 'youtube-dl'
+brew 'yarn'
 
 # Applications
 cask '1password'
@@ -32,6 +33,7 @@ cask 'hyper'
 cask 'imagealpha'
 cask 'imageoptim'
 cask 'iterm2'
+cask 'keepingyouawake'
 cask 'licecap'
 cask 'mattr-slate'
 cask 'rescuetime'
@@ -69,7 +71,7 @@ mas 'GIPHY CAPTURE', id: 668208984
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
-mas 'Dash', id: 458034879
-mas 'Caffeine', id: 411246225
+# mas 'Dash', id: 458034879
+# mas 'Caffeine', id: 411246225
 mas 'Tweetbot', id: 557168941
 mas 'Xcode', id: 497799835
