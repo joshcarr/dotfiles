@@ -254,7 +254,7 @@ var genBrowserHash = function(regex) {
 };
 
 // Chrome
-// iTerm
+// iTerm2
 // Sublime Text
 // Spotify
 // Evernote
@@ -267,7 +267,7 @@ var genBrowserHash = function(regex) {
 // 1 monitor layout
 var oneMonitorLayout = S.lay("oneMonitor", {
   "Google Chrome" : laptopFullHash,
-  "iTerm" : laptopFullHash,
+  "iTerm2" : laptopFullHash,
   "Sublime Text" : laptopFullHash,
   "Evernote" : laptopFullHash,
   "Things" : laptopFullHash,
@@ -286,7 +286,7 @@ var oneMonitorLayout = S.lay("oneMonitor", {
 // 2 monitor layout
 var twoMonitorLayout = S.lay("twoMonitor", {
   "Google Chrome" : laptopFullHash,
-  "iTerm" : laptopFullHash,
+  "iTerm2" : laptopFullHash,
   "Sublime Text" : landscapeFullHash,
   "Evernote" : laptopFullHash,
   "Things" : laptopFullHash,
@@ -306,7 +306,7 @@ var twoMonitorLayout = S.lay("twoMonitor", {
 var threeMonitorLayout = S.lay("threeMonitor", {
 
   "Google Chrome" : genBrowserHash(/^Developer\sTools\s-\s.+$/),
-  "iTerm" : portraitTopHalfHash,
+  "iTerm2" : portraitTopHalfHash,
   "Sublime Text" : landscapeFullHash,
   "Evernote" : portraitTopHalfHash,
   "Things" : portraitTopHalfHash,
