@@ -37,6 +37,7 @@ cask 'keepingyouawake'
 cask 'licecap'
 cask 'mattr-slate'
 cask 'rescuetime'
+cask 'selfcontrol'
 cask 'sequel-pro'
 cask 'skitch'
 cask 'sketch'
@@ -44,7 +45,7 @@ cask 'skyfonts'
 cask 'slack'
 cask 'spotify'
 cask 'sublime-text'
-cask 'things'
+# cask 'things'
 cask 'transmission'
 cask 'vlc'
 
@@ -73,5 +74,6 @@ mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 # mas 'Dash', id: 458034879
 # mas 'Caffeine', id: 411246225
+mas 'Things 3', id: 904280696
 mas 'Tweetbot', id: 557168941
 mas 'Xcode', id: 497799835
