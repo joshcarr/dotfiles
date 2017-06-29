@@ -151,6 +151,7 @@ function name() {
 var monitorPortrait = "1080x1920";
 var monitorLandscape = "1920x1080";
 var monitorLaptop = "1440x900";
+var monitorLaptop13Inch = "1280x800";
 
 // laptopFull
 // portraitFull
@@ -164,7 +165,8 @@ var monitorLaptop = "1440x900";
 
 // Operations
 var laptopFull = S.op("move", {
-  "screen" : monitorLaptop,
+  // "screen" : monitorLaptop,
+  "screen" : monitorLaptop13Inch,
   "x" : "screenOriginX",
   "y" : "screenOriginY",
   "width" : "screenSizeX",
