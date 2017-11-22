@@ -258,6 +258,7 @@ var genBrowserHash = function(regex) {
 // Chrome
 // iTerm2
 // Sublime Text
+// Code
 // Spotify
 // Evernote
 // Things
@@ -271,6 +272,7 @@ var oneMonitorLayout = S.lay("oneMonitor", {
   "Google Chrome" : laptopFullHash,
   "iTerm2" : laptopFullHash,
   "Sublime Text" : laptopFullHash,
+  "Code" : laptopFullHash,
   "Evernote" : laptopFullHash,
   "Things" : laptopFullHash,
   "Slack" : laptopFullHash,
@@ -290,6 +292,7 @@ var twoMonitorLayout = S.lay("twoMonitor", {
   "Google Chrome" : laptopFullHash,
   "iTerm2" : laptopFullHash,
   "Sublime Text" : landscapeFullHash,
+  "Code" : landscapeFullHash,
   "Evernote" : laptopFullHash,
   "Things" : laptopFullHash,
   "Slack" : laptopFullHash,
@@ -310,6 +313,7 @@ var threeMonitorLayout = S.lay("threeMonitor", {
   "Google Chrome" : genBrowserHash(/^Developer\sTools\s-\s.+$/),
   "iTerm2" : portraitTopHalfHash,
   "Sublime Text" : landscapeFullHash,
+  "Code" : landscapeFullHash,
   "Evernote" : portraitTopHalfHash,
   "Things" : portraitTopHalfHash,
   "Slack" : portraitBottomHalfHash,
