@@ -165,8 +165,8 @@ var monitorLaptop13Inch = "1280x800";
 
 // Operations
 var laptopFull = S.op("move", {
-  // "screen" : monitorLaptop,
-  "screen" : monitorLaptop13Inch,
+  "screen" : monitorLaptop,
+  // "screen" : monitorLaptop13Inch,
   "x" : "screenOriginX",
   "y" : "screenOriginY",
   "width" : "screenSizeX",
