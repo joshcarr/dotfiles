@@ -1,6 +1,7 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
+tap 'homebrew/cask-versions'
 
 brew 'ack'
 brew 'coreutils'
@@ -45,7 +46,7 @@ cask 'vlc'
 cask 'zoomus'
 
 # Quicklook Plugins
-cask 'betterzipql'
+cask 'betterzip'
 cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'qlprettypatch'
