@@ -10,43 +10,39 @@ brew 'hub'
 brew 'imagemagick'
 brew 'mas'
 brew 'node'
-brew 'ruby-build'
-brew 'rbenv'
+brew 'tippecanoe'
 brew 'trash'
 brew 'wget'
 brew 'youtube-dl'
 brew 'yarn'
 
 # Applications
-cask '1password'
+cask '1password6'
 cask 'adobe-creative-cloud'
-cask 'alfred'
-cask 'basecamp'
+cask 'alfred3'
+cask 'bettertouchtool'
+cask 'browserstacklocal'
+cask 'docker'
 cask 'dropbox'
 cask 'firefox'
-cask 'flux'
 cask 'gitup'
 cask 'google-chrome'
-cask 'google-drive'
-cask 'hyper'
 cask 'imagealpha'
 cask 'imageoptim'
 cask 'iterm2'
+cask 'kap-beta'
 cask 'keepingyouawake'
-cask 'licecap'
 cask 'mattr-slate'
 cask 'rescuetime'
-cask 'selfcontrol'
 cask 'sequel-pro'
 cask 'skitch'
 cask 'sketch'
 cask 'skyfonts'
 cask 'slack'
 cask 'spotify'
-cask 'sublime-text'
-cask 'transmission'
 cask 'visual-studio-code'
 cask 'vlc'
+cask 'zoomus'
 
 # Quicklook Plugins
 cask 'betterzipql'
@@ -70,5 +66,5 @@ mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Things 3', id: 904280696
-mas 'Tweetbot', id: 557168941
 mas 'Xcode', id: 497799835
+mas 'Dato', id: 1470584107
